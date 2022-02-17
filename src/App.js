@@ -36,7 +36,7 @@ const App = () => {
               />
 
               <Route
-                path={REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}
+                path={`${REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}/:coinId`}
                 element={<CryptoDetailsPage />}
               />
 
