@@ -11,6 +11,7 @@ export const REACT_APP_STRING_LITERALS = {
 export const REACT_APP_ROUTE_NAMES = {
   ROOT: '/',
   CRYPTOCURRENCIES: '/cryptocurrencies',
+  CRYPTO_DETAILS: '/cryptocurrencies/:coinId',
   EXCHANGES: '/exchanges',
   NEWS: '/news',
 }
