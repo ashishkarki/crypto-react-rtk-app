@@ -6,7 +6,7 @@ const Loading = () => {
       style={{
         border: '2px groove #859fc9',
         margin: '1rem',
-        marginTop: '40vh',
+        marginTop: '20vh',
         padding: '1rem',
       }}
     >
