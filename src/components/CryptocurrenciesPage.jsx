@@ -38,29 +38,39 @@ const CryptocurrenciesPage = ({ simplified }) => {
         )}
 
         <Row gutter={[32, 32]} className="crypto-card-container">
-          {cryptos?.map((crypto) => (
-            <Col key={crypto.id} xs={24} sm={12} lg={6} className="crypto-card">
-              <Link to={`${REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}/${crypto.id}`}>
-                <Card
-                  title={`${crypto.rank}. ${crypto.name}`}
-                  extra={
-                    <img
-                      className="crypto-image"
-                      src={crypto.iconUrl}
-                      alt="crypto"
-                    />
-                  }
-                  hoverable
+          {cryptos?.map((crypto) => {
+            return (
+              <Col
+                key={crypto.uuid}
+                xs={24}
+                sm={12}
+                lg={6}
+                className="crypto-card"
+              >
+                <Link
+                  to={`${REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}/${crypto.uuid}`}
                 >
-                  <p>Price: {millify(crypto.price)}</p>
+                  <Card
+                    title={`${crypto.rank}. ${crypto.name}`}
+                    extra={
+                      <img
+                        className="crypto-image"
+                        src={crypto.iconUrl}
+                        alt="crypto"
+                      />
+                    }
+                    hoverable
+                  >
+                    <p>Price: {millify(crypto.price)}</p>
 
-                  <p>Market Cap: {millify(crypto.marketCap)}</p>
+                    <p>Market Cap: {millify(crypto.marketCap)}</p>
 
-                  <p>Daily Change: {millify(crypto.change)}%</p>
-                </Card>
-              </Link>
-            </Col>
-          ))}
+                    <p>Daily Change: {millify(crypto.change)}%</p>
+                  </Card>
+                </Link>
+              </Col>
+            )
+          })}
         </Row>
       </>
     )
