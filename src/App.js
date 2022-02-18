@@ -36,7 +36,7 @@ const App = () => {
               />
 
               <Route
-                path={REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}
+                path={`${REACT_APP_ROUTE_NAMES.CRYPTO_DETAILS}/:coinId`}
                 element={<CryptoDetailsPage />}
               />
 
@@ -63,7 +63,7 @@ const App = () => {
 
           <Space>
             <Link to={REACT_APP_ROUTE_NAMES.ROOT}>Home</Link>
-            <Link to={REACT_APP_ROUTE_NAMES.EXCHANGES}>Exchanges</Link>
+            {/* <Link to={REACT_APP_ROUTE_NAMES.EXCHANGES}>Exchanges</Link> */}
             <Link to={REACT_APP_ROUTE_NAMES.CRYPTOCURRENCIES}>
               Cryptocurrencies
             </Link>
