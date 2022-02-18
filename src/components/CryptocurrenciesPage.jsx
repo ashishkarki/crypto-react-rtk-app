@@ -12,7 +12,7 @@ const CryptocurrenciesPage = ({ simplified }) => {
 
   const { data: cryptoList, isFetching } = useGetCryptosQuery(count)
   const [cryptos, setCryptos] = useState(cryptoList?.data?.coins)
-  console.log('cryptos :>> ', cryptos)
+  // console.log('cryptos :>> ', cryptos)
   const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {

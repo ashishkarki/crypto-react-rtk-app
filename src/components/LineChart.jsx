@@ -5,7 +5,7 @@ import { Chart as ChartJS } from 'chart.js/auto'
 const { Title } = Typography
 
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
-  console.log('coinHistory?.data?.history => ', coinHistory?.data?.history)
+  // console.log('coinHistory?.data?.history => ', coinHistory?.data?.history)
   const coinPrice = []
   let coinTimestamp = []
 
